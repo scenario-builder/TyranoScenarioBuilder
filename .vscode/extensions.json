@@ -1,0 +1,14 @@
+{
+  "recommendations": [
+    "rust-lang.rust-analyzer",
+    "tamasfe.even-better-toml",
+    "fill-labs.dependi",
+    "vadimcn.vscode-lldb",
+    "EditorConfig.EditorConfig",
+    "JScearcy.rust-doc-viewer",
+    "samuelcolvin.jinjahtml",
+    "shardulm94.trailing-spaces",
+    "humao.rest-client",
+    "Gruntfuggly.todo-tree"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  /*
+  ・XXX: 危険！動くけどなぜうごくかわからない。
+  ・FIXME: 既知の不具合があるコード。修正が必要。
+  ・WARNING: 注意が必要。
+  ・TODO: あとで追加、修正するべき機能がある。
+  ・HACK: あまりきれいじゃないコード。リファクタリングが必要。
+  */
+  "todo-tree.general.tags": [
+    "XXX:",
+    "FIXME:",
+    "TODO:",
+    "WARNING:",
+    "HACK:",
+    "NOTE:",
+    "[ ]:",
+    "[x]:"
+  ],
+  "todo-tree.highlights.customHighlight": {
+    "XXX:": {
+      "icon": "x",
+      "foreground": "#ff3838"
+    },
+    "WARNING:": {
+      "icon": "alert",
+      "foreground": "#d5d900"
+    },
+    "TODO:": {
+      "icon": "tasklist",
+      "foreground": "#00d788"
+    },
+    "HACK:": {
+      "icon": "shield",
+      "foreground": "#003cff"
+    },
+    "FIXME:": {
+      "icon": "flame",
+      "foreground": "#d41bf4"
+    }
+  }
+}
