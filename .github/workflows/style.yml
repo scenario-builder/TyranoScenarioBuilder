@@ -1,0 +1,22 @@
+name: Format and Lint
+
+on:
+  - push
+  - pull_request
+
+env:
+  RUSTFLAGS: "-Dwarnings"
+
+jobs:
+  style:
+    name: Format and Lint
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt, clippy
+      - run: |
+          cargo fmt --all -- --check
+          cargo clippy --all-targets --all-features
