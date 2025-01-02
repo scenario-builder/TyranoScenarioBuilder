@@ -15,6 +15,7 @@ use std::env;
 
 #[rocket::main]
 async fn main() {
+    // 1000パーこの辺のdb周りの処理を別のファイルに切り出した方がいいかもしれない
     let Ok(env) = dotenvy::dotenv() else {
       eprintln!(".envファイルが足りません！");
       std::process::exit(1);
@@ -44,9 +45,9 @@ async fn main() {
 }
 
 async fn rocket() -> Rocket<Build> {
-    rocket::build()
-        .mount("/", views::routes())
+    let r = rocket::build()
         .mount("/static", rocket::fs::FileServer::from("static"))
-        .attach(Template::fairing())
+        .attach(Template::fairing());
         //.attach(Template::custom(|engine| { teras::register_tera_functions(&mut engine.tera) }))
+    views::routes(r)
 }

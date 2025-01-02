@@ -1,0 +1,24 @@
+
+* {
+  --width_sidebar: 15em;
+}
+
+.sidebar-toggle {
+  transform: rotate(270deg);
+  transition: .7s;
+  &.sidebar-closed {
+    transform: translateX(.3em) rotate(0deg);
+  }
+}
+
+.sidebar {
+  width: var(--width_sidebar);
+  height: 100vh;
+  background-color: #fff;
+  transition: .7s;
+
+  &.sidebar-closed {
+    width: 0;
+    transform: translateX(-16em);
+  }
+}/
