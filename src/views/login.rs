@@ -1,6 +1,7 @@
 use rocket::serde::Serialize;
 use rocket_dyn_templates::{Template, };
 use rocket::{get, post};
+use rocket::request::FlashMessage;
 use rocket::response::{Redirect, Flash};
 use rocket::http::{Status, Cookie};
 use rocket::form::{Form};
@@ -14,13 +15,16 @@ pub fn routes() -> Vec<rocket::Route> {
 pub struct LoginForm {
   username: String,
   password: String,
+  flash: Option<(String, String)>,
 }
 
 #[get("/login")]
-pub fn login() -> Template {
+pub fn login(flash: Option<FlashMessage<'_>>) -> Template {
+  let flash = flash.map(FlashMessage::into_inner);
   let context = LoginForm {
     username: "".into(),
     password: "".into(),
+    flash: flash
   };
   Template::render("user/login", &context)
 }
