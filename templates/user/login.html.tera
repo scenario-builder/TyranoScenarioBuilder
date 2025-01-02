@@ -23,7 +23,7 @@
         </form>
         {% if flash %}
             <div class="mt-4 text-red-500 text-center">
-                {{ flash.0 }}
+                {{ flash.1 }}
             </div>
         {% endif %}
     </div>
