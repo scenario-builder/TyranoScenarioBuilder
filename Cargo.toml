@@ -13,8 +13,9 @@ itertools = "0.13.0"
 maplit = "1.0.2"
 regex = "1.11.1"
 rocket = "0.5.1"
+rocket_dyn_templates = { version = "0.2.0", features = ["tera"] }
 serde = "1.0.215"
-sqlx = "0.8.2"
+sqlx = { version = "0.8.2", features = ["runtime-tokio-native-tls", "sqlite"] }
 tera = "1.20.0"
 thiserror = "2.0.6"
 tokio = "1.42.0"
