@@ -12,9 +12,9 @@ dotenvy = "0.15.7"
 itertools = "0.13.0"
 maplit = "1.0.2"
 regex = "1.11.1"
-rocket = "0.5.1"
+rocket = { version = "0.5.1", features = ["json"]}
 rocket_dyn_templates = { version = "0.2.0", features = ["tera"] }
-serde = "1.0.215"
+serde = { version = "1.0.215", features  = ["derive"] }
 sqlx = { version = "0.8.2", features = ["runtime-tokio-native-tls", "sqlite"] }
 tera = "1.20.0"
 thiserror = "2.0.6"

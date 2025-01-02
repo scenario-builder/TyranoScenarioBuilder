@@ -1,2 +1,3 @@
 <link href="/static/css/main.css" rel="stylesheet">
 <link href="/static/css/tailwind.css" rel="stylesheet">
+<script defer src="/static/js/script.js"></script>

@@ -6,6 +6,8 @@ use rocket::response::{Redirect, Flash};
 use rocket::http::{Status, Cookie};
 use rocket::form::{Form};
 
+use tera::{Context};
+
 pub fn routes() -> Vec<rocket::Route> {
   routes![login, login_post]
 }
@@ -18,7 +20,7 @@ pub struct LoginForm {
   flash: Option<(String, String)>,
 }
 
-#[get("/login")]
+#[get("/")]
 pub fn login(flash: Option<FlashMessage<'_>>) -> Template {
   let flash = flash.map(FlashMessage::into_inner);
   let context = LoginForm {
