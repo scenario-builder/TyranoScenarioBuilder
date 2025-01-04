@@ -28,11 +28,11 @@ pub fn login(flash: Option<FlashMessage<'_>>) -> Template {
     Template::render("user/login", &context)
 }
 
-#[post("/login", data = "<form>")]
+#[post("/", data = "<form>")]
 pub fn login_post(form: Form<LoginForm>) -> Result<Redirect, Box<Flash<Redirect>>> {
     let form = form.into_inner();
     if form.username == "admin" && form.password == "darallium" {
-        Ok(Redirect::to("/"))
+        Ok(Redirect::to("/project/scenarios"))
     } else {
         Err(Box::new(Flash::error(
             Redirect::to("/login"),
