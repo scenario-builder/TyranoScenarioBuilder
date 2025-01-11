@@ -1,6 +1,6 @@
 -- Add up migration script here
 CREATE TABLE "Scenario" (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  id INTEGER PRIMARY KEY,
   name TEXT NOT NULL,
   project_id INTEGER,
   created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -9,7 +9,7 @@ CREATE TABLE "Scenario" (
 );
 
 CREATE TABLE "ScenarioTag" (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  id INTEGER PRIMARY KEY,
   scenario_id INTEGER,
   tag_id INTEGER,
   front_scenario_tag_id INTEGER,
@@ -19,7 +19,7 @@ CREATE TABLE "ScenarioTag" (
 );
 
 CREATE TABLE "InputContent" (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  id INTEGER PRIMARY KEY,
   input_id INTEGER NOT NULL,
   scenario_tag_id INTEGER,
   text TEXT,

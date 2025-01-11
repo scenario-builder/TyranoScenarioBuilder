@@ -1,11 +1,11 @@
 -- Add up migration script here
 CREATE TABLE TagCategory (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  id INTEGER PRIMARY KEY,
   name TEXT NOT NULL
 );
 
 CREATE TABLE Tag (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  id INTEGER PRIMARY KEY,
   name TEXT NOT NULL,
   export_rule TEXT NOT NULL,
   tag_category_id INTEGER NOT NULL,

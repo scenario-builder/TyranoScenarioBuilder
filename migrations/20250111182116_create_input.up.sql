@@ -1,11 +1,11 @@
 -- Add up migration script here
 CREATE TABLE InputType (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  id INTEGER PRIMARY KEY,
   type TEXT NOT NULL
 );
 
 CREATE TABLE Input (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  id INTEGER PRIMARY KEY,
   sort_index INTEGER NOT NULL,
   title TEXT NOT NULL,
   tag_id INTEGER,
