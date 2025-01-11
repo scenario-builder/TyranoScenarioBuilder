@@ -1,3 +1,3 @@
 -- Add down migration script here
-DROP TABLE "ConstantValue";
-DROP TABLE "ConstantCategory";
+DROP TABLE IF EXISTS "public"."ConstantValue";
+DROP TABLE IF EXISTS "public"."ConstantCategory";

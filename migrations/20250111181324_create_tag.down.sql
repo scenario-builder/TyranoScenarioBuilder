@@ -1,3 +1,3 @@
 -- Add down migration script here
-DROP TABLE Tag;
-DROP TABLE TagCategory;
+DROP TABLE IF EXISTS "public"."Tag";
+DROP TABLE IF EXISTS "public"."TagCategory";
