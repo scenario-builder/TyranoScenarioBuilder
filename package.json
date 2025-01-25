@@ -4,10 +4,11 @@
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.17"
   },
-    "scripts": {
+  "scripts": {
     "css:watch": "npx tailwindcss -i ./tailwind.css -o ./static/css/tailwind.css --watch",
     "css:build": "npx tailwindcss -i ./tailwind.css -o ./static/css/tailwind.css"
+  },
+  "dependencies": {
+    "blockly": "^11.2.1"
   }
-
-
 }

@@ -1,0 +1,33 @@
+{% extends "base" %}
+
+{% block head %}
+{% include 'head' %}
+<title>test</title>
+{% endblock %}
+{% block body %}
+<div class="bg-gray-100 flex items-center justify-center h-screen">
+  <div id="blocklyDiv" style="height: 480px; width: 1000px;"></div>
+  <script>
+    var workspace = Blockly.inject('blocklyDiv',                                                  // ライブラリに読み込ませる
+      { toolbox: {
+        "kind": "categoryToolbox",
+        "contents": [
+          {
+            "kind": "category",
+            "name": "core",
+            "contents": [
+              {
+                "kind": "block",
+                "type": "a_block"
+              },
+              {
+                "kind": "block",
+                "type": "b_block"
+              }
+            ]
+          }
+        ]
+      } });
+  </script>
+</div>
+{% endblock %}
