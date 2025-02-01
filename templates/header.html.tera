@@ -7,7 +7,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                     </svg>
                 </button>
-                <span class="ml-4 text-xl font-semibold">Project</span>
+                <span class="ml-4 text-xl font-semibold">{ title }</span>
             </div>
             <div class="flex items-center">
                 <span class="text-gray-700">ユーザ名</span>
@@ -15,4 +15,3 @@
         </div>
     </div>
 </header>
-

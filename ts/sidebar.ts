@@ -1,5 +1,5 @@
-var sidebarBtn = document.querySelector('.sidebar-toggle');
-var sidebar = document.querySelector('.sidebar');
+const sidebarBtn = document.querySelector('.sidebar-toggle') as HTMLElement | null;
+const sidebar = document.querySelector('.sidebar') as HTMLElement | null;
 
 if(sidebarBtn && sidebar) {
   sidebarBtn.addEventListener('click', function() {
