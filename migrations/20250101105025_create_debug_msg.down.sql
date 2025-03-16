@@ -1,2 +1,2 @@
 -- Add down migration script here
-DROP TABLE "public"."Messages";
+DROP TABLE IF EXISTS "public"."Messages";
